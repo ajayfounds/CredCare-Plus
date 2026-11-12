@@ -18,7 +18,7 @@ export function Splash() {
               </svg>
               CredCare
             </p>
-            <div style={{ marginTop: "176px" } as CSSProperties}>
+            <div style={{ marginTop: "var(--cover-gap)" } as CSSProperties}>
               <p className="t-subhead c2">
                 Your record starts today
               </p>

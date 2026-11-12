@@ -1,5 +1,5 @@
 /* verify: frame-local CSS ported from V9Verify.dc.html, V9VerifyOTP.dc.html, V9VerifyFetching.dc.html, V9VerifyDone.dc.html */
-.s-verify .band{position:relative;padding:64px 24px 0;height:180px;color:var(--t1);background:var(--n25)}
+.s-verify .band{position:relative;padding:var(--inset-top-band) var(--sp-6) 0;height:180px;color:var(--t1);background:var(--n25)}
 .s-verify .sheet{flex:1;margin-top:-32px;position:relative;background:var(--s0);border-radius:var(--r-xl) var(--r-xl) 0 0;box-shadow:var(--e0);padding:24px 20px 32px;display:flex;flex-direction:column}
 .s-verify .seg{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:var(--s2)}
 .s-verify .seg .th{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--s0);box-shadow:0 1px 2px var(--sh-08),0 4px 10px -4px var(--sh-18)}
@@ -39,7 +39,7 @@
 .s-verify .steps li.ok .dot{background:var(--ok600);box-shadow:none}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-verify.z0fbfaa{padding:56px 20px 32px !important}
+.s-verify.z0fbfaa{padding:var(--inset-top) var(--sp-5) var(--sp-8) !important}
 .s-verify .z062d4a{margin-top:24px !important}
 .s-verify .za56e29{--i: 1 !important;margin-top:8px !important}
 .s-verify .z3621a4{--i: 2 !important;margin-top:32px !important;display: flex !important;justify-content: space-between !important;align-items: center !important;padding-bottom:16px !important;box-shadow: inset 0 -1px 0 var(--line) !important}

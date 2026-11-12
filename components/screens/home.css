@@ -5,10 +5,10 @@
 .s-home .banner{display:flex;gap:12px;align-items:center;padding:8px 8px 8px 16px;border-radius:var(--r-md);background:var(--wn50);color:var(--wn700);font:var(--f-subhead-m)}
 .s-home .h2{font:var(--f-headline);color:var(--n900)}
 .s-home .lnk{display:inline-flex;align-items:center;gap:4px;min-height:44px;font:var(--f-subhead-m);color:var(--b700)}
-.s-home .hb{position:relative;background:var(--b700);color:var(--on-ink-1);padding:56px 20px 40px;box-shadow:inset 0 -60px 60px -40px var(--b800)}
+.s-home .hb{position:relative;background:var(--b700);color:var(--on-ink-1);padding:var(--inset-top) var(--sp-5) var(--sp-10);box-shadow:inset 0 -60px 60px -40px var(--b800)}
 .s-home .hb .c2{color:var(--on-ink-2)}.s-home .hb .ib{color:var(--on-ink-1)}.s-home .hb .ib:hover{background:var(--on-ink-rule);color:var(--on-ink-1)}
 .s-home .hb .lnk{color:var(--on-ink-1)}
-.s-home .sh{position:relative;margin-top:-24px;border-radius:var(--r-xl) 24px 0 0;background:var(--n25);padding:24px 20px 120px;display:flex;flex-direction:column;animation:rise--home var(--d-enter) var(--sp-gentle) 250ms both}
+.s-home .sh{position:relative;margin-top:-24px;border-radius:var(--r-xl) 24px 0 0;background:var(--n25);padding:var(--sp-6) var(--sp-5) var(--clear-tab);display:flex;flex-direction:column;animation:rise--home var(--d-enter) var(--sp-gentle) 250ms both}
 @keyframes rise--home{from{transform:translateY(40px);opacity:0}}
 .r.s-home[data-first="0"] .sh{animation:none}
 .s-home .tchip{display:inline-flex;align-items:center;gap:4px;min-height:28px;padding:2px 8px;border-radius:var(--r-sm);background:var(--wn50);color:var(--wn700);font:var(--f-footnote);font-weight:600}
@@ -35,7 +35,7 @@
 .s-home .z77c4bc{padding:20px !important;height: 220px !important}
 .s-home .za56d5f{width: 40% !important;height: 18px !important}
 .s-home .z37f803{width: 70% !important;height: 28px !important;margin-top:20px !important}
-.s-home .z7eafc3{height: 52px !important;margin-top:64px !important}
+.s-home .z7eafc3{height: 52px !important;margin-top:calc(var(--sp-8) * 2) !important}
 .s-home .zc2df40{height: 200px !important;margin-top:24px !important}
 .s-home .ze01f12{--i: 2 !important}
 .s-home .z7fa563{padding:20px !important}

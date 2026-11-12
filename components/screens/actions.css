@@ -31,7 +31,7 @@
 .s-actions .cb input:checked+.box{background:var(--ac);box-shadow:none}
 .s-actions .cb input:focus-visible+.box{outline:2px solid var(--ac);outline-offset:2px}
 .s-actions .track{position:relative;height:64px;border-radius:999px;padding:4px;overflow:hidden;background:var(--acbg);touch-action:none;user-select:none;transition:opacity 200ms linear}
-.s-actions .lbl{position:absolute;inset:0;display:grid;place-items:center;padding-left:56px;font:var(--f-callout);color:var(--acink);pointer-events:none}
+.s-actions .lbl{position:absolute;inset:0;display:grid;place-items:center;padding-left:var(--knob);font:var(--f-callout);color:var(--acink);pointer-events:none}
 .s-actions .fillt{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:var(--ac)}
 .s-actions .knob{position:relative;z-index:2;width:56px;height:56px;border:0;border-radius:999px;display:grid;place-items:center;color:var(--on-ink-1);cursor:grab;background:var(--ac);box-shadow:0 6px 14px -6px var(--sh-ac)}
 .s-actions .knob:disabled{cursor:not-allowed}
@@ -42,7 +42,7 @@
 .s-actions .prog{display:block;margin-top:8px;height:6px;border-radius:999px;background:var(--s3);overflow:hidden}
 .s-actions .prog i{display:block;height:100%;border-radius:999px;background:var(--ac);transform-origin:left}
 /* the rendered card: the moment of the Pay sheet */
-.s-actions .grab{position:absolute;left:50%;top:0;width:120px;height:24px;margin-left:-60px;display:grid;place-items:center;cursor:grab;touch-action:none;z-index:2}
+.s-actions .grab{position:absolute;left:50%;top:0;width:var(--grab-w);height:24px;margin-left:calc(var(--grab-w) / -2);display:grid;place-items:center;cursor:grab;touch-action:none;z-index:2}
 .s-actions .grab i{width:36px;height:4px;border-radius:999px;background:var(--n200)}
 @media (prefers-reduced-motion:reduce){.s-actions .spin{animation-duration:2400ms}.s-actions .sheet,.s-actions .scrim{animation:fd--actions 150ms linear both!important}.s-actions .toast{animation:none!important;transform:translateX(-50%)}}
 
@@ -127,7 +127,7 @@
 .s-actions .z1138ec{min-height: 56px !important}
 
 /* Layout carried over from the frame's inline styles. */
-.s-actions .act-body{padding:60px var(--sp-5) 128px;display:flex;flex-direction:column;gap:var(--sp-5)}
+.s-actions .act-body{padding:var(--inset-top-tab) var(--sp-5) var(--clear-tab-lg);display:flex;flex-direction:column;gap:var(--sp-5)}
 .s-actions .act-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:var(--sp-3)}
 .s-actions .act-ok{color:var(--ok700);display:grid}
 .s-actions .act-grid{display:grid}

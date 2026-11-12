@@ -1,13 +1,13 @@
 /* welcome: frame-local CSS ported from V9Welcome.dc.html */
 .s-welcome .dots{display:flex;gap:4px;justify-content:center}.s-welcome .dots i{display:block;width:6px;height:6px;border-radius:999px;background:var(--n500);transition:width var(--d-base) var(--ease-io),background-color var(--d-base) linear}.s-welcome .dots i.on{width:22px;background:var(--t1)}
-.s-welcome .pbh,.s-welcome .pbr{display:grid;grid-template-columns:56px 1fr auto;column-gap:12px;align-items:center;padding:0 64px 0 20px}
+.s-welcome .pbh,.s-welcome .pbr{display:grid;grid-template-columns:56px 1fr auto;column-gap:12px;align-items:center;padding:0 var(--pb-gutter) 0 var(--sp-5)}
 .s-welcome .pbh{min-height:28px;font:var(--f-caption);color:var(--n600);box-shadow:inset 0 -1px 0 var(--n200)}
 .s-welcome .pbr{min-height:48px;font:var(--f-subhead-m);color:var(--n900);box-shadow:inset 0 -1px 0 var(--n100)}
 .s-welcome .pbr>span:first-child{font:var(--f-footnote)}.s-welcome .pbr>span:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .s-welcome .pbr.tot{min-height:56px;background:var(--n25);box-shadow:inset 0 1px 0 var(--n200)}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-welcome.zfcaa6d{padding:60px 20px 32px !important}
+.s-welcome.zfcaa6d{padding:var(--inset-top-tab) var(--sp-5) var(--sp-8) !important}
 .s-welcome .z862645{margin:40px -48px 24px 0 !important;border-radius: var(--r-lg) 0 0 var(--r-lg) !important;overflow: hidden !important}
 .s-welcome .zffd616{--sd: 700ms !important}
 .s-welcome .z55a47e{--wd: 650ms !important}
@@ -21,6 +21,6 @@
 .s-welcome .z970539{color: var(--b700) !important;font: var(--f-subhead-m) !important}
 
 /* Layout carried over from the frame's inline styles. */
-.s-welcome .wl-head{display:flex;justify-content:space-between;align-items:baseline;padding:var(--sp-5) 64px var(--sp-3) var(--sp-5)}
+.s-welcome .wl-head{display:flex;justify-content:space-between;align-items:baseline;padding:var(--sp-5) var(--pb-gutter) var(--sp-3) var(--sp-5)}
 .s-welcome .wl-neg{color:var(--er700)}
-.s-welcome .wl-trend{padding:var(--sp-1) 64px var(--sp-2) var(--sp-5);background:var(--n25)}
+.s-welcome .wl-trend{padding:var(--sp-1) var(--pb-gutter) var(--sp-2) var(--sp-5);background:var(--n25)}

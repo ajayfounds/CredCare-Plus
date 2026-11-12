@@ -18,7 +18,7 @@
 @keyframes shin--dataperms{from{transform:translateY(100%)}to{transform:none}}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-dataperms.zccfae7{padding:56px 20px 40px !important}
+.s-dataperms.zccfae7{padding:var(--inset-top) var(--sp-5) var(--sp-10) !important}
 .s-dataperms .z7023da{text-align: center !important}
 .s-dataperms .z6e16cc{margin-top:8px !important;text-align: center !important}
 .s-dataperms .z3094ac{--i: 1 !important;margin:24px 0 12px !important}

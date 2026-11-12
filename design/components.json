@@ -1,0 +1,230 @@
+{
+ "$description": "CredCare v9 component contracts. Source for Figma component sets; not synced (Figma unavailable).",
+ "components": [
+  {
+   "name": "Button",
+   "class": "btn",
+   "use": "Primary action on a screen or sheet",
+   "variants": [
+    "primary (bp)",
+    "secondary (bs)",
+    "ghost (bg)",
+    "danger",
+    "hold"
+   ],
+   "states": [
+    "default",
+    "pressed",
+    "focus",
+    "disabled + reason",
+    "loading",
+    "success",
+    "holding",
+    "released early"
+   ],
+   "spec": "min-height 52 · radius r-md · label callout 15/600 · fill b700 · pressed scale .97",
+   "haptics": "press light; hold-complete medium",
+   "accessibility": "role=button · aria-disabled with a visible reason line · hold has a tap path and a confirm dialog"
+  },
+  {
+   "name": "Ledger row",
+   "class": "lr",
+   "use": "One entry in a list: task, event, account or payment",
+   "variants": [
+    "task",
+    "done",
+    "event",
+    "locked"
+   ],
+   "states": [
+    "default",
+    "pressed",
+    "due (wn50 wash + time chip)",
+    "landing (ok50 + stamp)",
+    "swiping left/right",
+    "locked"
+   ],
+   "spec": "min-height 72 · padding 12/20 · mark 24 · title headline · amount mono-l right",
+   "haptics": "press light; swipe threshold selection",
+   "accessibility": "button or link · swipe has an equivalent tap · amount read with the title"
+  },
+  {
+   "name": "Payment card",
+   "class": "cc",
+   "use": "The account you are paying from or about to pay",
+   "variants": [
+    "front",
+    "back (paid)",
+    "mini 48",
+    "mini 64"
+   ],
+   "states": [
+    "rest",
+    "tilt (pointer)",
+    "flip (paid)"
+   ],
+   "spec": "ISO/IEC 7810 ID-1 · 1.586 : 1 · radius 14 (3.7% of width) · facets one hue · chip 38×28",
+   "haptics": "paid success",
+   "accessibility": "aria-label carries bank, product, last four and the amount; the facets are aria-hidden"
+  },
+  {
+   "name": "Week strip",
+   "class": "wk",
+   "use": "Seven days of the statement cycle",
+   "variants": [
+    "default"
+   ],
+   "states": [
+    "on time",
+    "ahead",
+    "missed",
+    "today (ring)",
+    "selected (underline)"
+   ],
+   "spec": "day cell 44×76 · mark 28 · legend row below",
+   "haptics": "tap selection",
+   "accessibility": "each day is a button labelled \"Mon 2 Feb, paid on time\""
+  },
+  {
+   "name": "Phase stack",
+   "class": "stk",
+   "use": "The three phases of the plan, one on top",
+   "variants": [
+    "3 pages"
+   ],
+   "states": [
+    "top",
+    "peeking (strip)",
+    "dragging",
+    "reduced motion"
+   ],
+   "spec": "page radius r-xl · peek 56 / 112 · strip 44 · edge 4 in the phase colour",
+   "haptics": "drag end selection",
+   "accessibility": "each strip is a button; dots announce phase, name and state"
+  },
+  {
+   "name": "Score band track",
+   "class": "bt",
+   "use": "Where the score sits on 300–900",
+   "variants": [
+    "on ink",
+    "on white"
+   ],
+   "states": [
+    "default"
+   ],
+   "spec": "height 6 · marker 4×16 · four band segments · labels 300/550/700/900",
+   "haptics": "—",
+   "accessibility": "role=img with the band named in text as well as colour"
+  },
+  {
+   "name": "Printer loader",
+   "class": "prn",
+   "use": "A wait that takes seconds, not milliseconds",
+   "variants": [
+    "live",
+    "once",
+    "paused (canvas)"
+   ],
+   "states": [
+    "printing",
+    "line done"
+   ],
+   "spec": "3 ruled lines · mono-m · tick ok700",
+   "haptics": "—",
+   "accessibility": "role=status aria-live=polite; reduced motion shows the lines already printed"
+  },
+  {
+   "name": "Stamp",
+   "class": "stamp",
+   "use": "A record that cleared",
+   "variants": [
+    "ok",
+    "brand",
+    "large"
+   ],
+   "states": [
+    "land",
+    "static"
+   ],
+   "spec": "rotate −4° · double rule · caption 13/600 tracked .08em",
+   "haptics": "stamp medium",
+   "accessibility": "role=img with the word as its label"
+  },
+  {
+   "name": "Sheet",
+   "class": "sheet",
+   "use": "A task that needs the account in view",
+   "variants": [
+    "pay",
+    "auto-pay",
+    "upload",
+    "dispute",
+    "receipt"
+   ],
+   "states": [
+    "rising",
+    "resting",
+    "dragging",
+    "closing"
+   ],
+   "spec": "radius r-xl · padding 28/20/16 · grabber 36×4 · scrim n900 at 32%",
+   "haptics": "—",
+   "accessibility": "role=dialog aria-modal · grabber has a close button beside it"
+  },
+  {
+   "name": "Toast",
+   "class": "toast",
+   "use": "Confirmation you can undo, or an error you can retry",
+   "variants": [
+    "info",
+    "success",
+    "undo",
+    "error"
+   ],
+   "states": [
+    "in",
+    "out"
+   ],
+   "spec": "min-height 48 · radius r-md · e2 · 96 above the tab bar",
+   "haptics": "paid success; error warning",
+   "accessibility": "role=status; the action is a real button"
+  },
+  {
+   "name": "Field",
+   "class": "well",
+   "use": "One input with its label",
+   "variants": [
+    "text",
+    "password",
+    "OTP"
+   ],
+   "states": [
+    "rest",
+    "focus",
+    "filled",
+    "error + shake",
+    "success"
+   ],
+   "spec": "padding 9/16 · focus ring 2 b600 · error ring 2 er600 · message footnote er700",
+   "haptics": "error warning",
+   "accessibility": "label tied to the input; the message is referenced by aria-describedby"
+  },
+  {
+   "name": "Tab bar",
+   "class": "tb",
+   "use": "The five places in the app",
+   "variants": [
+    "5 tabs"
+   ],
+   "states": [
+    "active (filled icon, 600 label, 24×3 indicator)",
+    "inactive",
+    "badge"
+   ],
+   "spec": "docked · no shadow · inset hairline · item min-height 56 · bottom padding 34",
+   "haptics": "tap light",
+   "accessibility": "aria-current=page; the badge is read as a count"
+  }
+ ]
+}

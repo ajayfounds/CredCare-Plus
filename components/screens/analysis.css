@@ -5,7 +5,7 @@
 .s-analysis .notch{animation:drop var(--d-base) var(--spring) 900ms both}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-analysis.z39bb65{padding:56px 20px 40px !important}
+.s-analysis.z39bb65{padding:var(--inset-top) var(--sp-5) var(--sp-10) !important}
 .s-analysis .zb0043e{margin-top:16px !important}
 .s-analysis .zd43169{margin-top:8px !important}
 .s-analysis .z022793{margin-top:20px !important;padding:20px !important}
@@ -23,7 +23,7 @@
 .s-analysis .z3b9cf7{position: absolute !important;left: 30% !important;top: -4px !important;width: 2px !important;height: 16px !important;background: var(--n900) !important;border-radius: 1px !important}
 .s-analysis .z0098fd{color: var(--n900) !important}
 .s-analysis .z062d4a{margin-top:24px !important}
-.s-analysis.z517d4f{padding:56px 20px 40px !important}
+.s-analysis.z517d4f{padding:var(--inset-top) var(--sp-5) var(--sp-10) !important}
 .s-analysis .z7023da{text-align: center !important}
 
 /* Layout carried over from the frame's inline styles. */

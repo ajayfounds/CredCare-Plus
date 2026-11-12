@@ -1,5 +1,5 @@
 /* signin: frame-local CSS ported from V9SignIn.dc.html, V9SignInError.dc.html */
-.s-signin .band{position:relative;padding:64px 24px 0;height:180px;color:var(--t1);background:var(--n25)}
+.s-signin .band{position:relative;padding:var(--inset-top-band) var(--sp-6) 0;height:180px;color:var(--t1);background:var(--n25)}
 .s-signin .sheet{flex:1;margin-top:-32px;position:relative;background:var(--s0);border-radius:var(--r-xl) var(--r-xl) 0 0;box-shadow:var(--e0);padding:24px 20px 32px;display:flex;flex-direction:column}
 .s-signin .seg{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:var(--s2)}
 .s-signin .seg .th{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--s0);box-shadow:0 1px 2px var(--sh-08),0 4px 10px -4px var(--sh-18)}

@@ -5,6 +5,7 @@ import '@/styles/app.css';
 import '@/styles/shell.css';
 import { AppProvider } from '@/lib/store';
 import { Shell } from '@/components/Shell';
+import tokens from '@/design/tokens.json';
 
 const manrope = Manrope({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-manrope', display: 'swap' });
 const plex = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-plex', display: 'swap' });
@@ -19,7 +20,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#F8F9FC',
+  themeColor: tokens.primitive.n25.$value,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

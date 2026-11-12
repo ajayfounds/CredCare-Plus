@@ -1,6 +1,6 @@
 /* phasecomplete: frame-local CSS ported from V9PhaseComplete.dc.html */
 /* static layout moved out of markup (v9 system pass) */
-.s-phasecomplete.z0fbfaa{padding:56px 20px 32px !important}
+.s-phasecomplete.z0fbfaa{padding:var(--inset-top) var(--sp-5) var(--sp-8) !important}
 .s-phasecomplete .z04317a{display: flex !important;flex-direction: column !important;align-items: center !important;text-align: center !important;margin-top:24px !important}
 .s-phasecomplete .zaaae7b{width: 220px !important;height: 150px !important}
 .s-phasecomplete .z3d1dfb{position: absolute !important;inset: 0 !important;padding:16px !important;text-align: left !important;box-shadow: var(--e3) !important}

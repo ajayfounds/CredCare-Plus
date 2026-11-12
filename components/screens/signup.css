@@ -1,5 +1,5 @@
 /* signup: frame-local CSS ported from V9SignUp.dc.html, V9SignUpError.dc.html */
-.s-signup .band{position:relative;padding:64px 24px 0;height:180px;color:var(--t1);background:var(--n25)}
+.s-signup .band{position:relative;padding:var(--inset-top-band) var(--sp-6) 0;height:180px;color:var(--t1);background:var(--n25)}
 .s-signup .sheet{flex:1;margin-top:-32px;position:relative;background:var(--s0);border-radius:var(--r-xl) var(--r-xl) 0 0;box-shadow:var(--e0);padding:24px 20px 32px;display:flex;flex-direction:column}
 .s-signup .seg{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:var(--s2)}
 .s-signup .seg .th{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--s0);box-shadow:0 1px 2px var(--sh-08),0 4px 10px -4px var(--sh-18)}
@@ -24,7 +24,7 @@
 
 /* static layout moved out of markup (v9 system pass) */
 .s-signup.z6d3072{padding:0 !important}
-.s-signup .z661f89{height: 160px !important;padding-top:60px !important}
+.s-signup .z661f89{height: 160px !important;padding-top:var(--inset-top-tab) !important}
 .s-signup .z18fd28{--i: 1 !important;margin-top:2px !important;color: var(--t2) !important}
 .s-signup .z9218c6{--i: 1 !important}
 .s-signup .ze01f12{--i: 2 !important}

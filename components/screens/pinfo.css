@@ -14,7 +14,7 @@
 @media (prefers-reduced-motion:reduce){.s-pinfo .sw,.s-pinfo .sw::after{transition:none}}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-pinfo.zccfae7{padding:56px 20px 40px !important}
+.s-pinfo.zccfae7{padding:var(--inset-top) var(--sp-5) var(--sp-10) !important}
 .s-pinfo .z7023da{text-align: center !important}
 .s-pinfo .z062d4a{margin-top:24px !important}
 .s-pinfo .z8dcdf4{display: flex !important;gap:4px !important;align-items: center !important;margin:8px 12px !important;color: var(--d) !important}

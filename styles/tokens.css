@@ -4,3 +4,6 @@
 
 /* Alpha and utility tokens the reference frames use outside the published set (component tier). */
 :root{--sh-40:rgba(11,11,15,.4);--sh-18:rgba(11,11,15,.18);--sh-08:rgba(11,11,15,.08);--sh-ac:rgba(42,68,216,.55);--wn-rule:rgba(180,83,9,.25);--n900-12:rgba(22,24,29,.12);--n900-25:rgba(22,24,29,.25);--n900-42:rgba(22,24,29,.42);--b700-12:rgba(26,51,184,.12);--b900-25:rgba(15,31,112,.25);--b900-30:rgba(15,31,112,.3);--mask:#000;--dim:rgba(22,24,29,.04);--page-max:430px}
+
+/* Layout tokens: page insets and clearances the frames use. They are positions, not the spacing rhythm (--sp-*). */
+:root{--inset-top:56px;--inset-top-tab:60px;--inset-top-band:64px;--clear-tab:120px;--clear-tab-lg:128px;--clear-dock:140px;--pb-gutter:64px;--knob:56px;--grab-w:120px;--cover-top:300px;--cover-gap:176px}

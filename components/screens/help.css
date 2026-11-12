@@ -21,7 +21,7 @@
 @media (prefers-reduced-motion:reduce){.s-help .a,.s-help .pm,.s-help .a p{transition:none}}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-help.zccfae7{padding:56px 20px 40px !important}
+.s-help.zccfae7{padding:var(--inset-top) var(--sp-5) var(--sp-10) !important}
 .s-help .z7023da{text-align: center !important}
 .s-help .z062d4a{margin-top:24px !important}
 .s-help .z962484{margin-top:4px !important;font-weight: 400 !important}
