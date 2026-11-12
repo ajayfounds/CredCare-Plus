@@ -53,3 +53,11 @@
 .s-learn .z002535{margin-top:12px !important}
 .s-learn .zf45ce8{margin-top:4px !important;max-width: 260px !important}
 .s-learn .z3bf6ef{width: auto !important;min-height: 44px !important;margin-top:16px !important}
+
+/* Layout carried over from the frame's inline styles. */
+.s-learn .ln-sk-row{display:flex;gap:var(--sp-2)}
+.s-learn .ln-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:var(--sp-3)}
+.s-learn .ln-main{flex:1;min-width:0}
+.s-learn .ln-meta{display:flex;justify-content:space-between;gap:var(--sp-2)}
+.s-learn .ln-empty-ic{color:var(--n600);display:grid}
+.s-learn .row .chev{display:grid}

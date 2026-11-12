@@ -69,3 +69,14 @@
 .s-article .z33f683{--i: 2 !important;margin-top:20px !important;padding:20px !important}
 .s-article .z83da50{margin-top:12px !important;height: 6px !important;overflow: visible !important}
 .s-article .zdc8b50{display: flex !important;justify-content: space-between !important;margin-top:8px !important}
+
+/* Layout carried over from the frame's inline styles. */
+.s-article .ar-top{display:flex;justify-content:space-between;align-items:center}
+.s-article .ar-tools{display:flex;gap:var(--sp-2)}
+.s-article .ar-col{display:flex;flex-direction:column}
+.s-article .ar-dot{width:12px;height:12px;border-radius:var(--r-full)}
+.s-article .ar-row{display:flex;justify-content:space-between;align-items:baseline}
+.s-article .ar-notch{position:absolute;top:-3px;width:2px;height:12px;background:var(--n700);border-radius:1px}
+.s-article .ar-list{display:flex;flex-direction:column;gap:var(--sp-2);margin-top:var(--sp-3)}
+.s-article .ar-votes{display:flex;gap:var(--sp-2);margin-top:var(--sp-3)}
+.s-article .ar-down{transform:rotate(180deg)}
