@@ -14,7 +14,7 @@ body{margin:0;background:var(--n50);font-family:var(--ff);color:var(--t1);-webki
 .phone .r{overflow:clip}
 
 /* Overlays dock to the phone, not to the scrolling page. */
-.phone .tb,.phone .r .toast,.phone .r .scrim,.phone .r .sheet[role=dialog],.phone .r .dlg,.phone .r .dlgs,.phone .r .dock{position:fixed}
+.phone .tb,.phone .r .toast,.phone .r .scrim,.phone .r .sheet[role=dialog],.phone .r .sheet[role=alertdialog],.phone .r .dlg,.phone .r .dlgs,.phone .r .dock{position:fixed}
 .phone .tb{padding-bottom:max(32px,env(safe-area-inset-bottom))}
 
 /* Week-strip selected underline: the frames' 4 px snap pass left it 2 px off centre (20 px wide, −8 margin). */
