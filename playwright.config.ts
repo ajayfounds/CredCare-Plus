@@ -8,13 +8,13 @@ export default defineConfig({
   fullyParallel: true,
   reporter: [['list'], ['json', { outputFile: 'audit/playwright.json' }]],
   use: {
-    baseURL: `http://localhost:${PORT}`,
+    baseURL: process.env.BASE_URL ?? `http://localhost:${PORT}`,
     ...devices['Pixel 7'],
     viewport: { width: 390, height: 844 },
     hasTouch: false,
     isMobile: false,
   },
-  webServer: {
+  webServer: process.env.BASE_URL ? undefined : {
     command: `npx next start -p ${PORT}`,
     url: `http://localhost:${PORT}/home`,
     reuseExistingServer: true,

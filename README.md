@@ -59,4 +59,4 @@ All checks pass. Details and every intentional difference from the frames are in
 
 ## Live URL
 
-Not deployed yet.
+**https://credcare-plus.vercel.app**, deployed on Vercel with the Next.js preset and no environment variables. All 21 Playwright tests also pass against it: `BASE_URL=https://credcare-plus.vercel.app npm run test:e2e`.
