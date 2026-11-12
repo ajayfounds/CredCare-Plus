@@ -19,16 +19,17 @@ for (const [frame, route] of Object.entries(ROUTES)) {
   if (only && !frame.includes(only)) continue;
   const ref = path.join(REF, frame + '.png');
   const { h } = fs.existsSync(ref) ? pngSize(ref) : { h: 844 };
-  const ctx = await browser.newContext({ viewport: { width: 390, height: h }, deviceScaleFactor: 1, reducedMotion: 'reduce' });
+  const ctx = await browser.newContext({ viewport: { width: 390, height: h }, deviceScaleFactor: 1, reducedMotion: process.env.REDUCED ? 'reduce' : 'no-preference' });
   // Entrances are once per session: mark them seen so the shot shows the settled screen.
-  await ctx.addInitScript(() => { try { sessionStorage.setItem('cc9-audit', '1'); } catch {} });
+  const names = [...new Set(Object.keys(ROUTES).map((k) => 'V9' + k.replace(/^V9/, '')))];
+  await ctx.addInitScript((ns) => { try { if (!sessionStorage.getItem('cc9-audit')) { ns.forEach((n) => sessionStorage.setItem('cc9-in-' + n, '1')); sessionStorage.setItem('cc9-audit', '1'); } } catch {} }, names);
   const page = await ctx.newPage();
   const errors = [];
   page.on('console', (m) => { if (m.type() === 'error' && !/404/.test(m.text())) errors.push(m.text().slice(0, 300)); });
   page.on('pageerror', (e) => errors.push(String(e).slice(0, 300)));
   await page.goto(base + route, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  await page.waitForTimeout(1200);
+  await page.waitForTimeout(2000);
   const out = path.join('audit/screens', frame + '.png');
   await page.screenshot({ path: out });
   if (fs.existsSync(ref)) {

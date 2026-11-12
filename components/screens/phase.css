@@ -12,3 +12,9 @@
 .s-phase .zd9a2f8{margin-top:8px !important;height: 6px !important;overflow: visible !important}
 .s-phase.za66b6f{padding:56px 20px 40px !important}
 .s-phase .zc4475f{--c: 210.5 !important;stroke: var(--ph3) !important}
+
+/* Layout carried over from the frame's inline styles. */
+.s-phase .ph-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center}
+.s-phase .ph-ring{margin-top:var(--sp-5)}
+.s-phase .ph-sec{display:flex;justify-content:space-between;align-items:baseline;margin:var(--sp-8) 0 var(--sp-3)}
+.s-phase .ph-notch{position:absolute;top:-3px;width:2px;height:12px;background:var(--n700);border-radius:1px}

@@ -14,3 +14,9 @@
 .s-phasecomplete .zc36aa9{margin-top:8px !important;max-width: 300px !important}
 .s-phasecomplete .z9218c6{--i: 1 !important}
 .s-phasecomplete .z599519{--i: 2 !important;margin-top:auto !important}
+
+/* Layout carried over from the frame's inline styles. */
+.s-phasecomplete .pc-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center}
+.s-phasecomplete .pc-edge{position:absolute;left:var(--sp-5);right:var(--sp-5);top:0;height:4px;border-radius:0 0 4px 4px}
+.s-phasecomplete .pc-stamp{position:absolute;right:-28px;bottom:-14px;z-index:4}
+.s-phasecomplete .pc-sec{display:flex;justify-content:space-between;align-items:baseline;margin:var(--sp-8) 0 var(--sp-3)}
