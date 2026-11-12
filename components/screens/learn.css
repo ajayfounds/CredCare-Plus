@@ -18,8 +18,8 @@
 .r.s-learn[data-first="0"] .fbar i{animation:none}
 .s-learn .fbar i{transition:opacity var(--d-fast) linear,translate var(--d-base) var(--sp-snappy)}
 .s-learn .fbar[data-sel="0"] i:nth-child(1),.s-learn .fbar[data-sel="1"] i:nth-child(2),.s-learn .fbar[data-sel="2"] i:nth-child(3),.s-learn .fbar[data-sel="3"] i:nth-child(4){translate:0 -3px}
-.s-learn .thumb[data-c="Debt"]{background:var(--wn50)!important;color:var(--wn700)!important}.s-learn .thumb[data-c="Strategy"]{background:var(--ok50)!important;color:var(--ok700)!important}.s-learn .thumb[data-c="Disputes"]{background:var(--n100)!important;color:var(--n700)!important}
-.s-learn .thumb{width:48px!important;height:48px;border-radius:var(--r-md);background:var(--b50);color:var(--b700)!important}.s-learn .thumb svg{width:22px;height:22px}
+/* every category thumbnail uses the Disputes grey style */
+.s-learn .thumb{width:48px!important;height:48px;border-radius:var(--r-md);background:var(--n100)!important;color:var(--n700)!important}.s-learn .thumb svg{width:22px;height:22px}
 .s-learn .fbar[data-sel="0"] i:not(:nth-child(1)),.s-learn .fbar[data-sel="1"] i:not(:nth-child(2)),.s-learn .fbar[data-sel="2"] i:not(:nth-child(3)),.s-learn .fbar[data-sel="3"] i:not(:nth-child(4)){opacity:.25}
 .s-learn .fleg{display:grid;grid-template-columns:1fr 1fr;margin:8px -4px 0}.s-learn .fleg button{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;border-radius:var(--r-sm);border:0;background:transparent;text-align:left;font:var(--f-subhead);color:var(--n700);cursor:pointer;white-space:nowrap;transition:color var(--d-fast) linear}
 .s-learn .fleg button i{width:10px;height:10px;border-radius:3px;flex:none}.s-learn .fleg button[aria-pressed=true]{color:var(--b700);background:var(--b50)}
