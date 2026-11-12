@@ -1,0 +1,12 @@
+/* safespace: frame-local CSS ported from V9SafeSpace.dc.html */
+.s-safespace .dots{display:flex;gap:4px;justify-content:center}.s-safespace .dots i{display:block;width:6px;height:6px;border-radius:999px;background:var(--n500);transition:width var(--d-base) var(--ease-io),background-color var(--d-base) linear}.s-safespace .dots i.on{width:22px;background:var(--t1)}
+
+/* static layout moved out of markup (v9 system pass) */
+.s-safespace .z0fbfaa{padding:56px 20px 32px !important}
+.s-safespace .z3ae1f6{margin-top:20px !important}
+.s-safespace .z61c2b5{margin-top:12px !important;animation-delay: 60ms}
+.s-safespace .zb86f87{--i: 2 !important;margin-top:8px !important}
+.s-safespace .z435dc3{--i: 3 !important;margin-top:24px !important;overflow: hidden !important}
+.s-safespace .zdb071a{align-items: flex-start !important;min-height: 0 !important;padding:16px 20px !important}
+.s-safespace .zf005b8{margin-top:2px !important}
+.s-safespace .z706f65{--i: 5 !important;margin-top:auto !important}

@@ -1,0 +1,27 @@
+/* analysis: frame-local CSS ported from V9Analysis.dc.html, V9AnalysisCollapsed.dc.html */
+.s-analysis .cz{display:grid;grid-template-columns:auto 1fr;column-gap:16px;padding:20px}
+.s-analysis .cz .pts{font:var(--f-mono-xl);color:var(--er700)}.s-analysis .cz .pts small{display:block;font:var(--f-caption);color:var(--n700)}
+.s-analysis .cz .fx{display:inline-flex;align-items:center;gap:4px;min-height:44px;margin-top:4px;font:var(--f-subhead-m);color:var(--b700)}
+.s-analysis .notch{animation:drop var(--d-base) var(--spring) 900ms both}
+
+/* static layout moved out of markup (v9 system pass) */
+.s-analysis .z39bb65{padding:56px 20px 40px !important}
+.s-analysis .zb0043e{margin-top:16px !important}
+.s-analysis .zd43169{margin-top:8px !important}
+.s-analysis .z022793{margin-top:20px !important;padding:20px !important}
+.s-analysis .z94da87{width: 310px !important;height: 190px !important}
+.s-analysis .z3c2b61{--len0: 243 !important}
+.s-analysis .ze89d57{--len: 57 !important}
+.s-analysis .z4309ec{--k: 0 !important}
+.s-analysis .z0f6408{--k: 1 !important}
+.s-analysis .z4b87ae{margin:32px 0 12px !important}
+.s-analysis .z9ce4f9{display: flex !important;flex-direction: column !important;gap:12px !important;--cb: 300ms !important}
+.s-analysis .zf5fdc7{--wd: 300ms !important}
+.s-analysis .zf005b8{margin-top:2px !important}
+.s-analysis .z002535{margin-top:12px !important}
+.s-analysis .zaf3f30{height: 8px !important;overflow: visible !important}
+.s-analysis .z3b9cf7{position: absolute !important;left: 30% !important;top: -4px !important;width: 2px !important;height: 16px !important;background: var(--n900) !important;border-radius: 1px !important}
+.s-analysis .z0098fd{color: var(--n900) !important}
+.s-analysis .z062d4a{margin-top:24px !important}
+.s-analysis .z517d4f{padding:56px 20px 40px !important}
+.s-analysis .z7023da{text-align: center !important}

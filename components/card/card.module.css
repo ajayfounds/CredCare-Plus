@@ -1,0 +1,10 @@
+/* Card layout only (ported from the frames' z-classes). The material lives in styles/app.css (.cc). */
+.inner{padding-left:32px;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:flex-start}
+.chip{display:flex;align-items:center;gap:var(--sp-2);margin-top:auto}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;margin-top:var(--sp-3)}
+.num{letter-spacing:.12em}
+.due{text-align:right}
+.label{display:block}
+.value{display:block;line-height:26px}
+.back{display:flex;justify-content:space-between;align-items:center}

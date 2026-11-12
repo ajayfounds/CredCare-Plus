@@ -1,0 +1,43 @@
+/* The phone frame: full bleed on a phone, a centred 430 px column on desktop. Not part of the frames; layout only. */
+/* next/font self-hosts the families under generated names; the tokens point at them at both levels they are defined. */
+:root,.phone .r{--ff:var(--font-manrope),'Manrope',system-ui,sans-serif;--ff-mono:var(--font-plex),'IBM Plex Mono',ui-monospace,monospace}
+html,body{height:100%}
+body{margin:0;background:var(--n50);font-family:var(--ff);color:var(--t1);-webkit-tap-highlight-color:transparent}
+.page{min-height:100dvh;display:flex;justify-content:center}
+/* transform makes this the containing block for every position:fixed overlay inside it */
+.phone{position:relative;width:100%;max-width:var(--page-max);height:100dvh;overflow:hidden;background:var(--bg);transform:translateZ(0);view-transition-name:phone}
+.scroller{position:absolute;inset:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch}
+
+/* The frames were a fixed canvas; in the app the root grows with its content. */
+.r{min-height:100%}
+
+/* Overlays dock to the phone, not to the scrolling page. */
+.phone .tb,.phone .toast,.phone .scrim,.phone .sheet,.phone .dlg,.phone .dlgs,.phone .dock{position:fixed}
+.phone .tb{padding-bottom:max(32px,env(safe-area-inset-bottom))}
+
+/* Week-strip selected underline: the frames' 4 px snap pass left it 2 px off centre (20 px wide, −8 margin). */
+.wk button[aria-pressed=true]::after{margin-left:-10px}
+
+/* Push transition (spec/screens.md, Shell). */
+::view-transition-group(phone){animation-duration:var(--d-enter);animation-timing-function:var(--ease);overflow:clip}
+::view-transition-old(phone),::view-transition-new(phone){animation-duration:var(--d-enter);animation-timing-function:var(--ease);mix-blend-mode:normal}
+html[data-nav=push]::view-transition-new(phone){animation-name:vt-in-right}
+html[data-nav=push]::view-transition-old(phone){animation-name:vt-out-left}
+html[data-nav=back]::view-transition-new(phone){animation-name:vt-in-left}
+html[data-nav=back]::view-transition-old(phone){animation-name:vt-out-right;z-index:2}
+@keyframes vt-in-right{from{transform:translateX(100%)}}
+@keyframes vt-out-left{to{transform:translateX(-30%);filter:brightness(.96)}}
+@keyframes vt-in-left{from{transform:translateX(-30%);filter:brightness(.96)}}
+@keyframes vt-out-right{to{transform:translateX(100%)}}
+@media (prefers-reduced-motion:reduce){::view-transition-old(phone),::view-transition-new(phone){animation:fade 150ms linear both}}
+
+/* Mini card: the same object at 48 and 64 px (frames: z20706d, z6e2004). Chip sits at ~10 % of the width. */
+.cc.mini48{width:48px;flex:none;border-radius:var(--card-r-sm);box-shadow:var(--e1)}
+.cc.mini64{width:64px;flex:none;border-radius:var(--card-r-sm);box-shadow:var(--e1)}
+.cc .minichip{position:absolute;top:50%;transform:translateY(-50%);display:grid}
+
+/* Shared helpers ported from frame z-classes that recur across screens. */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.dlg-detail{margin-top:var(--sp-2)}
+.dlg-cta{margin-top:var(--sp-5)}
+.wk-legend{margin:var(--sp-2) var(--sp-2) 0}

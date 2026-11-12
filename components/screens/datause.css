@@ -1,0 +1,18 @@
+/* datause: frame-local CSS ported from V9DataUse.dc.html */
+.s-datause .dots{display:flex;gap:4px;justify-content:center}.s-datause .dots i{display:block;width:6px;height:6px;border-radius:999px;background:var(--n500);transition:width var(--d-base) var(--ease-io),background-color var(--d-base) linear}.s-datause .dots i.on{width:22px;background:var(--t1)}
+
+/* static layout moved out of markup (v9 system pass) */
+.s-datause .z0fbfaa{padding:56px 20px 32px !important}
+.s-datause .z3ae1f6{margin-top:20px !important}
+.s-datause .z61c2b5{margin-top:12px !important;animation-delay: 60ms}
+.s-datause .za56e29{--i: 1 !important;margin-top:8px !important}
+.s-datause .z05801e{--i: 2 !important;margin-top:32px !important}
+.s-datause .z706dd3{--i: 2 !important;overflow: hidden !important}
+.s-datause .zdb071a{align-items: flex-start !important;min-height: 0 !important;padding:16px 20px !important}
+.s-datause .zf005b8{margin-top:2px !important}
+.s-datause .z8d0cab{--i: 3 !important;margin-top:24px !important}
+.s-datause .zcf0733{--i: 3 !important;overflow: hidden !important}
+.s-datause .z1138ec{min-height: 56px !important}
+.s-datause .z706f65{--i: 5 !important;margin-top:auto !important}
+.s-datause .zc5e1d4{text-align: center !important;margin-bottom:12px !important}
+.s-datause .z93d1d3{font-weight: 600 !important}

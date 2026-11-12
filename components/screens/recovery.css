@@ -1,0 +1,32 @@
+/* recovery: frame-local CSS ported from V9Recovery.dc.html */
+.s-recovery .lnk{display:inline-flex;align-items:center;gap:4px;min-height:44px;font:var(--f-subhead-m);color:var(--b700)}
+.s-recovery .pg.drag{transition:none}
+.s-recovery .rfill{transform-origin:left;animation:fill var(--d-data) var(--ease) 200ms both}
+.s-recovery .rmk{animation:drop var(--d-base) var(--spring) 600ms both}
+.r.s-recovery[data-first="0"] .rfill,.r.s-recovery[data-first="0"] .rmk{animation:none}
+/* purpose: the stack deals in once, back page first */
+.s-recovery .stk .pg[data-p="2"]{animation:deal2--recovery var(--d-enter) var(--ease) 150ms backwards}.s-recovery .stk .pg[data-p="1"]{animation:deal1--recovery var(--d-enter) var(--ease) 220ms backwards}.s-recovery .stk .pg[data-p="0"]{animation:deal0--recovery var(--d-enter) var(--sp-gentle) 300ms backwards}
+@keyframes deal0--recovery{from{opacity:0;transform:translateY(40px)}}@keyframes deal1--recovery{from{opacity:0;transform:translateY(30px) scale(.95)}}@keyframes deal2--recovery{from{opacity:0;transform:translateY(20px) scale(.9)}}
+.r.s-recovery[data-first="0"] .stk .pg{animation:none}
+
+/* static layout moved out of markup (v9 system pass) */
+.s-recovery .z0f7229{padding:60px 20px 120px !important}
+.s-recovery .za18ac8{margin-top:4px !important}
+.s-recovery .z32c83a{--i: 1 !important;margin-top:20px !important;padding:16px 20px 12px !important}
+.s-recovery .zeae596{position: absolute !important;left: 0 !important;top: 0 !important;bottom: 0 !important;width: 6.7% !important;border-radius: 4px !important;background: var(--ph1) !important}
+.s-recovery .z8ff0db{position: absolute !important;left: 6.7% !important;top: -5px !important;width: 18px !important;height: 18px !important;margin-left:-8px !important;border-radius: 999px !important;background: var(--n0) !important;box-shadow: inset 0 0 0 4px var(--ph1), var(--e1) !important}
+.s-recovery .zcd70cc{position: relative !important;height: 18px !important;margin-top:8px !important}
+.s-recovery .z7357f5{--i: 2 !important;margin:32px 0 12px !important}
+.s-recovery .z8575db{--i: 2 !important;height: 500px !important}
+.s-recovery .zcbe9d9{background: var(--ph1) !important}
+.s-recovery .zdb29ee{width: 64px !important;height: 64px !important}
+.s-recovery .ze1f086{--c: 185.4 !important;stroke: var(--ph1) !important}
+.s-recovery .ze7085d{display: grid !important;color: var(--wn600) !important}
+.s-recovery .z0098fd{color: var(--n900) !important}
+.s-recovery .zc9c4b8{display: grid !important;color: var(--n500) !important}
+.s-recovery .z002535{margin-top:12px !important}
+.s-recovery .zef9e69{background: var(--ph2) !important}
+.s-recovery .z3b83b5{--c: 185.4 !important;stroke: var(--ph2) !important}
+.s-recovery .zad83a1{background: var(--ph3) !important}
+.s-recovery .zf6ce38{--c: 185.4 !important;stroke: var(--ph3) !important}
+.s-recovery .z7a17a5{margin-top:12px !important;color: var(--n700) !important}

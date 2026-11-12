@@ -1,0 +1,32 @@
+/* help: frame-local CSS ported from V9Help.dc.html, V9HelpSent.dc.html */
+.s-help .sw{appearance:none;-webkit-appearance:none;position:relative;flex:none;width:52px;height:32px;margin:0;border-radius:999px;background:var(--s0);box-shadow:inset 0 0 0 1.5px var(--bs);cursor:pointer;transition:background-color 200ms linear,box-shadow 200ms linear}
+.s-help .sw:disabled{opacity:.5;cursor:default}.s-help .sw[aria-busy=true]::after{background:var(--n100)}
+.s-help .sw::after{content:"";position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:999px;background:var(--n0);box-shadow:0 1px 3px var(--n900-25);transition:transform 250ms cubic-bezier(.65,0,.35,1)}
+.s-help .sw:checked{background:var(--b700);box-shadow:none}.s-help .sw:checked::after{transform:translateX(20px)}
+.s-help .sw:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.s-help .well{display:block;padding:8px 16px;border-radius:var(--r-md);background:var(--s1);box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow 150ms linear,background-color 150ms linear}
+.s-help .well+.well{margin-top:8px}
+.s-help .well:focus-within{background:var(--s0);box-shadow:inset 0 0 0 2px var(--ac)}
+.s-help .well.err{background:var(--s0);box-shadow:inset 0 0 0 2px var(--d)}
+.s-help .well .k{display:flex;justify-content:space-between;align-items:center;font:var(--f-caption);color:var(--t2)}
+.s-help .well .v{display:flex;align-items:center;gap:8px;margin-top:2px;color:var(--t2)}
+.s-help .well input{flex:1;min-width:0;height:26px;border:0;outline:0;background:transparent;font:var(--f-body);color:var(--t1)}
+@media (prefers-reduced-motion:reduce){.s-help .sw,.s-help .sw::after{transition:none}}
+
+.s-help .faq+.faq{box-shadow:inset 0 1px 0 var(--line)}
+.s-help .q{display:flex;align-items:center;gap:12px;width:100%;min-height:60px;padding:12px 20px;border:0;background:transparent;text-align:left;font:var(--f-body);color:var(--t1);cursor:pointer}
+.s-help .q:hover{background:var(--s1)}
+.s-help .pm{width:24px;height:24px;flex:none;display:grid;place-items:center;color:var(--n600);transition:transform var(--d-fast) var(--ease)}
+.s-help .a{display:grid;transition:grid-template-rows var(--d-enter) var(--ease-io)}.s-help .a>div{overflow:hidden}.s-help .a p{transition:opacity 200ms linear}
+@media (prefers-reduced-motion:reduce){.s-help .a,.s-help .pm,.s-help .a p{transition:none}}
+
+/* static layout moved out of markup (v9 system pass) */
+.s-help .zccfae7{padding:56px 20px 40px !important}
+.s-help .z7023da{text-align: center !important}
+.s-help .z062d4a{margin-top:24px !important}
+.s-help .z962484{margin-top:4px !important;font-weight: 400 !important}
+.s-help .z3ae1f6{margin-top:20px !important}
+.s-help .z705a97{margin-top:20px !important;display: flex !important;gap:12px !important;align-items: flex-start !important;padding:12px 16px !important;border-radius: var(--r-md) !important;background: var(--ok50) !important;color: var(--t1) !important;animation: in var(--d-enter) var(--ease) both}
+.s-help .za7e2a6{--i: 1 !important;margin:32px 0 12px !important}
+.s-help .za358bd{--i: 1 !important;overflow: hidden !important}
+.s-help .z8fcf47{transform: rotate(90deg)}

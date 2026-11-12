@@ -1,0 +1,40 @@
+/* signup: frame-local CSS ported from V9SignUp.dc.html, V9SignUpError.dc.html */
+.s-signup .band{position:relative;padding:64px 24px 0;height:180px;color:var(--t1);background:var(--n25)}
+.s-signup .sheet{flex:1;margin-top:-32px;position:relative;background:var(--s0);border-radius:var(--r-xl) var(--r-xl) 0 0;box-shadow:var(--e0);padding:24px 20px 32px;display:flex;flex-direction:column}
+.s-signup .seg{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:var(--s2)}
+.s-signup .seg .th{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--s0);box-shadow:0 1px 2px var(--sh-08),0 4px 10px -4px var(--sh-18)}
+.s-signup .seg a,.s-signup .seg span{position:relative;min-height:44px;display:grid;place-items:center;border-radius:999px;font:var(--f-callout);color:var(--t2)}
+.s-signup .seg .on{color:var(--t1)}
+.s-signup .well{display:block;padding:8px 16px;border-radius:var(--r-md);background:var(--s1);box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow 150ms linear,background-color 150ms linear}
+.s-signup .well:focus-within{background:var(--s0);box-shadow:inset 0 0 0 2px var(--ac)}
+.s-signup .well .k{display:flex;justify-content:space-between;align-items:center;font:var(--f-caption);color:var(--t2)}
+.s-signup .well .v{display:flex;align-items:center;gap:8px;margin-top:2px}
+.s-signup .well input{flex:1;min-width:0;height:26px;border:0;outline:0;background:transparent;font:var(--f-body);color:var(--t1)}
+.s-signup .well input::placeholder{color:var(--t3);font-weight:400}
+.s-signup .eye{width:44px;height:44px;margin:-8px -12px -8px 0;border:0;border-radius:var(--r-md);background:transparent;color:var(--t2);display:grid;place-items:center;cursor:pointer}
+.s-signup .k a{display:inline-flex;align-items:center;min-height:44px;margin:-12px -8px -12px 0;padding:0 8px}
+.s-signup .lg a,.s-signup .ferr a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;margin:-12px 0}
+.s-signup .ferr{display:flex;gap:4px;align-items:center;margin:4px 4px 0;color:var(--er700);font:var(--f-footnote)}
+.s-signup .well.err{background:var(--s0);box-shadow:inset 0 0 0 2px var(--er600)}
+.s-signup .or{display:flex;align-items:center;gap:12px;font:var(--f-footnote);color:var(--t3)}
+.s-signup .sw{text-align:center;font:var(--f-subhead);color:var(--t2)}.s-signup .sw a{display:inline-flex;align-items:center;min-height:44px;font:var(--f-subhead-m);color:var(--b700)}
+.s-signup .or::before,.s-signup .or::after{content:"";flex:1;height:1px;background:var(--line)}
+.s-signup .meter{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:8px 4px 0}
+.s-signup .meter i{display:block;height:4px;border-radius:2px;background:var(--s3);transition:background-color 250ms linear}
+
+/* static layout moved out of markup (v9 system pass) */
+.s-signup .z6d3072{padding:0 !important}
+.s-signup .z661f89{height: 160px !important;padding-top:60px !important}
+.s-signup .z18fd28{--i: 1 !important;margin-top:2px !important;color: var(--t2) !important}
+.s-signup .z9218c6{--i: 1 !important}
+.s-signup .ze01f12{--i: 2 !important}
+.s-signup .zeccc95{padding-right:8px !important;box-shadow: 1px 0 0 var(--line) !important}
+.s-signup .zd3f99e{--i: 3 !important}
+.s-signup .z497f5e{color: var(--b600) !important;font-weight: 600 !important;padding:12px 2px !important;margin:-12px 0 !important}
+.s-signup .zd77e4a{--i: 4 !important}
+.s-signup .z140796{margin:4px 4px 0 !important}
+.s-signup .z80d446{--i: 5 !important;margin-top:20px !important}
+.s-signup .za77d7f{--i: 6 !important;margin-top:16px !important;display: flex !important;flex-direction: column !important;gap:16px !important}
+.s-signup .z1dd022{min-height: 48px !important}
+.s-signup .z7023da{text-align: center !important}
+.s-signup .z93d1d3{font-weight: 600 !important}

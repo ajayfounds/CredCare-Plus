@@ -1,0 +1,36 @@
+/* signin: frame-local CSS ported from V9SignIn.dc.html, V9SignInError.dc.html */
+.s-signin .band{position:relative;padding:64px 24px 0;height:180px;color:var(--t1);background:var(--n25)}
+.s-signin .sheet{flex:1;margin-top:-32px;position:relative;background:var(--s0);border-radius:var(--r-xl) var(--r-xl) 0 0;box-shadow:var(--e0);padding:24px 20px 32px;display:flex;flex-direction:column}
+.s-signin .seg{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:var(--s2)}
+.s-signin .seg .th{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--s0);box-shadow:0 1px 2px var(--sh-08),0 4px 10px -4px var(--sh-18)}
+.s-signin .seg a,.s-signin .seg span{position:relative;min-height:44px;display:grid;place-items:center;border-radius:999px;font:var(--f-callout);color:var(--t2)}
+.s-signin .seg .on{color:var(--t1)}
+.s-signin .well{display:block;padding:8px 16px;border-radius:var(--r-md);background:var(--s1);box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow 150ms linear,background-color 150ms linear}
+.s-signin .well:focus-within{background:var(--s0);box-shadow:inset 0 0 0 2px var(--ac)}
+.s-signin .well .k{display:flex;justify-content:space-between;align-items:center;font:var(--f-caption);color:var(--t2)}
+.s-signin .well .v{display:flex;align-items:center;gap:8px;margin-top:2px}
+.s-signin .well input{flex:1;min-width:0;height:26px;border:0;outline:0;background:transparent;font:var(--f-body);color:var(--t1)}
+.s-signin .well input::placeholder{color:var(--t3);font-weight:400}
+.s-signin .eye{width:44px;height:44px;margin:-8px -12px -8px 0;border:0;border-radius:var(--r-md);background:transparent;color:var(--t2);display:grid;place-items:center;cursor:pointer}
+.s-signin .k a{display:inline-flex;align-items:center;min-height:44px;margin:-12px -8px -12px 0;padding:0 8px}
+.s-signin .lg a,.s-signin .ferr a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;margin:-12px 0}
+.s-signin .ferr{display:flex;gap:4px;align-items:center;margin:4px 4px 0;color:var(--er700);font:var(--f-footnote)}
+.s-signin .well.err{background:var(--s0);box-shadow:inset 0 0 0 2px var(--er600)}
+.s-signin .or{display:flex;align-items:center;gap:12px;font:var(--f-footnote);color:var(--t3)}
+.s-signin .sw{text-align:center;font:var(--f-subhead);color:var(--t2)}.s-signin .sw a{display:inline-flex;align-items:center;min-height:44px;font:var(--f-subhead-m);color:var(--b700)}
+.s-signin .or::before,.s-signin .or::after{content:"";flex:1;height:1px;background:var(--line)}
+.s-signin .meter{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:8px 4px 0}
+.s-signin .meter i{display:block;height:4px;border-radius:2px;background:var(--s3);transition:background-color 250ms linear}
+
+/* static layout moved out of markup (v9 system pass) */
+.s-signin .z6d3072{padding:0 !important}
+.s-signin .z6e6a93{margin-top:2px !important;color: var(--t2) !important}
+.s-signin .z134702{display: flex !important;gap:12px !important;align-items: flex-start !important;margin-bottom:16px !important;padding:12px 12px !important;border-radius: var(--r-md) !important;background: var(--er50) !important;color: var(--er700) !important;font: var(--f-subhead-m) !important}
+.s-signin .z680829{flex: none !important;margin-top:1px !important}
+.s-signin .z9218c6{--i: 1 !important}
+.s-signin .ze01f12{--i: 2 !important}
+.s-signin .z93d1d3{font-weight: 600 !important}
+.s-signin .z301c22{--i: 3 !important;margin-top:20px !important}
+.s-signin .za555bf{--i: 4 !important;margin-top:16px !important;display: flex !important;flex-direction: column !important;gap:16px !important}
+.s-signin .z1dd022{min-height: 48px !important}
+.s-signin .z7023da{text-align: center !important}
