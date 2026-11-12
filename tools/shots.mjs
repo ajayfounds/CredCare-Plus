@@ -23,6 +23,9 @@ for (const [frame, route] of Object.entries(ROUTES)) {
   // Entrances are once per session: mark them seen so the shot shows the settled screen.
   await ctx.addInitScript(() => { try { sessionStorage.setItem('cc9-audit', '1'); } catch {} });
   const page = await ctx.newPage();
+  const errors = [];
+  page.on('console', (m) => { if (m.type() === 'error' && !/404/.test(m.text())) errors.push(m.text().slice(0, 300)); });
+  page.on('pageerror', (e) => errors.push(String(e).slice(0, 300)));
   await page.goto(base + route, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(1200);
@@ -37,6 +40,6 @@ for (const [frame, route] of Object.entries(ROUTES)) {
     await cmp.screenshot({ path: path.join('audit/compare', frame + '.png'), fullPage: true });
   }
   await ctx.close();
-  console.log(frame, route);
+  console.log(frame, route, errors.length ? '\n  ERRORS: ' + errors.join('\n  ') : '');
 }
 await browser.close();

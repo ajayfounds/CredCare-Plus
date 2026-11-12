@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import { AnimatePresence, motion, useDragControls, useReducedMotion, type PanInfo } from 'motion/react';
 import { dur, ease, gesture, spring } from '@/lib/motion';
 
@@ -21,15 +21,21 @@ const CloseIcon = () => (
  * role=dialog aria-modal, Escape closes, focus moves in and returns to the opener.
  */
 export function Sheet({ open, label, onClose, children }: Props) {
+  const cb = useRef(onClose);
+  useLayoutEffect(() => { cb.current = onClose; });
   const reduce = useReducedMotion();
   const drag = useDragControls();
   const ref = useRef<HTMLDivElement>(null);
+  // Sheets are client-only: the reduced-motion entrance can differ from the server render.
+  const [mounted, setMounted] = useState(false);
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!open) return;
     const opener = document.activeElement as HTMLElement | null;
     const key = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') cb.current();
       if (e.key === 'Tab' && ref.current) {
         const f = ref.current.querySelectorAll<HTMLElement>('button:not([disabled]),a[href],input,[tabindex]:not([tabindex="-1"])');
         if (!f.length) return;
@@ -41,7 +47,7 @@ export function Sheet({ open, label, onClose, children }: Props) {
     document.addEventListener('keydown', key);
     const t = setTimeout(() => ref.current?.focus({ preventScroll: true }), 50);
     return () => { document.removeEventListener('keydown', key); clearTimeout(t); opener?.focus?.({ preventScroll: true }); };
-  }, [open, onClose]);
+  }, [open]);
 
   const end = (_: unknown, info: PanInfo) => {
     if (info.offset.y > gesture.sheetDismiss || info.velocity.y / 1000 > gesture.sheetFlick) onClose();
@@ -51,7 +57,7 @@ export function Sheet({ open, label, onClose, children }: Props) {
   const fall = { duration: dur.exit / 1000, ease: ease.in };
   return (
     <AnimatePresence>
-      {open ? (
+      {open && mounted ? (
         <>
           <motion.div
             key="scrim"
@@ -69,8 +75,8 @@ export function Sheet({ open, label, onClose, children }: Props) {
             role="dialog"
             aria-modal="true"
             aria-label={label}
-            initial={reduce ? { opacity: 0 } : { y: '100%' }}
-            animate={reduce ? { opacity: 1, transition: rise } : { y: 0, transition: rise }}
+            initial={reduce ? { y: 0, opacity: 0 } : { y: '100%', opacity: 1 }}
+            animate={{ y: 0, opacity: 1, transition: rise }}
             exit={reduce ? { opacity: 0, transition: fall } : { y: '100%', transition: fall }}
             drag="y"
             dragControls={drag}

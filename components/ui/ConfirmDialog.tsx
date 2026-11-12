@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useId, useRef } from 'react';
+import { useEffect, useLayoutEffect, useId, useRef } from 'react';
 
 type Props = {
   title: string;
@@ -12,15 +12,17 @@ type Props = {
 
 /** The tap / keyboard / screen-reader path for every hold-to-confirm, and the log-out confirm. */
 export function ConfirmDialog({ title, detail, cta, onConfirm, onCancel, danger }: Props) {
+  const cb = useRef(onCancel);
+  useLayoutEffect(() => { cb.current = onCancel; });
   const id = useId();
   const btn = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     const opener = document.activeElement as HTMLElement | null;
     btn.current?.focus();
-    const key = (e: KeyboardEvent) => { if (e.key === 'Escape') onCancel(); };
+    const key = (e: KeyboardEvent) => { if (e.key === 'Escape') cb.current(); };
     document.addEventListener('keydown', key);
     return () => { document.removeEventListener('keydown', key); opener?.focus?.(); };
-  }, [onCancel]);
+  }, []);
   return (
     <>
       <div className="dlgs" onClick={onCancel} />

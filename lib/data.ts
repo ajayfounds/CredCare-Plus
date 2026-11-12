@@ -78,7 +78,8 @@ export const week = [
 ];
 
 export const dispute = { lender: 'Bajaj Finance', enquiryDate: '12 Jan 2026', type: 'Personal loan' };
-export const upload  = { file: 'Payslip_Jan.pdf', sizeMB: 2.0, uploadedMB: 1.2, pct: 62, maxMB: 5 };
+export const upload  = { file: 'Payslip_Jan.pdf', sizeMB: 2.0, uploadedMB: 1.2, pct: 62, maxMB: 5,
+  rejectedSizeMB: 8.4 }; // rejectedSizeMB: the over-limit file in V9SheetUploadError (added in the build; it was only in the frame)
 
 export const factors = [
   { key: 'payments',    label: 'Payments',    weight: 30, note: 'Did you pay on time? The biggest factor' },

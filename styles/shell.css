@@ -12,7 +12,7 @@ body{margin:0;background:var(--n50);font-family:var(--ff);color:var(--t1);-webki
 .r{min-height:100%}
 
 /* Overlays dock to the phone, not to the scrolling page. */
-.phone .tb,.phone .toast,.phone .scrim,.phone .sheet,.phone .dlg,.phone .dlgs,.phone .dock{position:fixed}
+.phone .tb,.phone .r .toast,.phone .r .scrim,.phone .r .sheet,.phone .r .dlg,.phone .r .dlgs,.phone .r .dock{position:fixed}
 .phone .tb{padding-bottom:max(32px,env(safe-area-inset-bottom))}
 
 /* Week-strip selected underline: the frames' 4 px snap pass left it 2 px off centre (20 px wide, −8 margin). */
@@ -41,3 +41,6 @@ html[data-nav=back]::view-transition-old(phone){animation-name:vt-out-right;z-in
 .dlg-detail{margin-top:var(--sp-2)}
 .dlg-cta{margin-top:var(--sp-5)}
 .wk-legend{margin:var(--sp-2) var(--sp-2) 0}
+
+/* The sheet container takes focus for screen readers; it is not a control. */
+.sheet:focus,.sheet:focus-visible{outline:none}

@@ -124,3 +124,20 @@
 .s-actions .z397deb{width: 36px !important;height: 36px !important;border-width: 3px !important}
 .s-actions .z304f34{flex: none !important}
 .s-actions .z1138ec{min-height: 56px !important}
+
+/* Layout carried over from the frame's inline styles. */
+.s-actions .act-body{padding:60px var(--sp-5) 128px;display:flex;flex-direction:column;gap:var(--sp-5)}
+.s-actions .act-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:var(--sp-3)}
+.s-actions .act-ok{color:var(--ok700);display:grid}
+.s-actions .act-grid{display:grid}
+.s-actions .act-mt12{margin-top:var(--sp-3)}
+.s-actions .act-target{position:absolute;top:-4px;width:2px;height:16px;background:var(--n900);border-radius:1px}
+.s-actions .kv b.act-due{color:var(--wn700)}
+.s-actions .act-pair{display:grid;grid-template-columns:1fr 1.6fr;gap:var(--sp-2)}
+.s-actions .act-err-ic{color:var(--d);display:grid}
+.s-actions .act-block{display:block;font-weight:600}
+.s-actions .act-stamp-pos{position:absolute;right:var(--sp-3);top:-20px}
+/* the frame names an `up` keyframe it never defines: the bar fills to its value while the file uploads */
+@keyframes up--actions{from{transform:scaleX(0)}}
+.s-actions .act-upbar{animation:up--actions 1200ms linear both}
+@media (prefers-reduced-motion:reduce){.s-actions .act-upbar{animation:none}}
