@@ -50,7 +50,11 @@ const PATTERN: Record<Haptic, number | number[]> = {
 
 /** Haptics map from tokens.json → navigator.vibrate where the platform supports it. */
 export function haptic(kind: Haptic) {
-  if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
+  if (typeof navigator === 'undefined' || !('vibrate' in navigator)) return;
+  // Browsers refuse vibration before the first user gesture.
+  const ua = (navigator as Navigator & { userActivation?: { hasBeenActive: boolean } }).userActivation;
+  if (ua && !ua.hasBeenActive) return;
+  {
     try {
       navigator.vibrate(PATTERN[kind]);
     } catch {

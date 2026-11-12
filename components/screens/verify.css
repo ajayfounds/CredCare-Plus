@@ -54,3 +54,10 @@
 .s-verify .zb97a3d{min-height: 18px !important}
 .s-verify .z875fa1{--sd: 1000ms !important}
 .s-verify .ze94a92{margin-top:auto !important;animation: in var(--d-enter) var(--ease) both}
+
+/* Layout carried over from the frame's inline styles. */
+.s-verify .vf-ok{color:var(--ok600);display:grid}
+.s-verify .vf-mt32{margin-top:var(--sp-8)}
+.s-verify .vf-row{display:flex;justify-content:space-between;align-items:center;margin-top:var(--sp-3)}
+.s-verify .vf-rel{position:relative}
+.s-verify .vf-stamp{position:absolute;right:var(--sp-3);bottom:-14px}
