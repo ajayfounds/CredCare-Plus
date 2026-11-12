@@ -10,3 +10,6 @@
 .s-splash .z062278{animation: draw var(--d-data) 100ms var(--ease) forwards}
 .s-splash .zb0043e{margin-top:16px !important}
 .s-splash .zf86e68{margin-top:4px !important;color: var(--on-ink-2) !important}
+
+/* tap skips the cover */
+.s-splash .cover.skip{animation:none;visibility:hidden}

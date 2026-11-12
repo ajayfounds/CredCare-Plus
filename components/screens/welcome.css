@@ -19,3 +19,8 @@
 .s-welcome .z056d8e{--i: 3 !important;margin-top:12px !important}
 .s-welcome .zb0207b{--i: 4 !important;display: flex !important;flex-direction: column !important;gap:4px !important;margin-top:32px !important}
 .s-welcome .z970539{color: var(--b700) !important;font: var(--f-subhead-m) !important}
+
+/* Layout carried over from the frame's inline styles. */
+.s-welcome .wl-head{display:flex;justify-content:space-between;align-items:baseline;padding:var(--sp-5) 64px var(--sp-3) var(--sp-5)}
+.s-welcome .wl-neg{color:var(--er700)}
+.s-welcome .wl-trend{padding:var(--sp-1) 64px var(--sp-2) var(--sp-5);background:var(--n25)}

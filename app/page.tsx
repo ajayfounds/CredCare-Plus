@@ -1,5 +1,8 @@
-import { redirect } from 'next/navigation';
+import type { Metadata } from 'next';
+import { Splash } from '@/components/screens/Splash';
+
+export const metadata: Metadata = { title: 'CredCare' };
 
 export default function Page() {
-  redirect('/home');
+  return <Splash />;
 }
