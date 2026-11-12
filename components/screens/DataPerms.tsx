@@ -113,7 +113,7 @@ export function DataPerms() {
                 Turn off bureau access?
               </p>
               <p className="za18ac8 t-subhead c2">
-                We won't refresh your credit report, so your score, plan and tasks stop updating. You can turn it back on any time.
+                We won&apos;t refresh your credit report, so your score, plan and tasks stop updating. You can turn it back on any time.
               </p>
               <button className="zcdf73f btn" type="button" onClick={v.confirmOff}>
                 Turn off

@@ -41,7 +41,6 @@ export function Home({ state: forced }: { state?: HomeState }) {
   const later = (fn: () => void, ms: number) => { timers.current.push(setTimeout(fn, ms)); };
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- device clock is only known on the client
     setHoursLeft(hoursLeftToday());
     if (typeof navigator !== 'undefined' && navigator.onLine === false) setOffline(true);
   }, []);
@@ -244,7 +243,7 @@ export function Home({ state: forced }: { state?: HomeState }) {
       </div>
       {snoozed ? (
         <Toast icon={<CalendarIcon />} action="Undo" onAction={() => { setSnoozed(false); app.snooze(null); }}>
-          We'll remind you at 6 pm
+          We&apos;ll remind you at 6 pm
         </Toast>
       ) : null}
     </Screen>

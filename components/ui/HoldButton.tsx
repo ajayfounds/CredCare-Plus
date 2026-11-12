@@ -4,7 +4,8 @@ import { dur, haptic } from '@/lib/motion';
 
 type Props = {
   label: string;
-  ariaLabel: string;
+  /** id of the hint under the button, read as its description. */
+  describedBy?: string;
   /** Fires after a full 600 ms hold. */
   onComplete: () => void;
   /** A tap, a keypress or a screen-reader activation: the caller confirms in a dialog instead. */
@@ -21,7 +22,7 @@ const TAP_MS = 180;
  * Hold to confirm a money action. A white 22 % fill sweeps left to right and a 3 px bar fills along the bottom
  * over 600 ms; letting go early springs both back (snappy) and says "Released early" for 1.2 s.
  */
-export function HoldButton({ label, ariaLabel, onComplete, onTap, disabled, initial = 'rest', className = '' }: Props) {
+export function HoldButton({ label, describedBy, onComplete, onTap, disabled, initial = 'rest', className = '' }: Props) {
   const [h, setH] = useState<'0' | '1' | '2' | '3'>(initial === 'holding' ? '3' : initial === 'released' ? '2' : '0');
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const relT = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -66,7 +67,7 @@ export function HoldButton({ label, ariaLabel, onComplete, onTap, disabled, init
       className={`btn bp hold ${className}`.trim()}
       type="button"
       data-h={h}
-      aria-label={ariaLabel}
+      aria-describedby={describedBy}
       aria-disabled={disabled || undefined}
       onPointerDown={down}
       onPointerUp={up}

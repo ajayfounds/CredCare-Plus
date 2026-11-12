@@ -46,3 +46,16 @@ html[data-nav=back]::view-transition-old(phone){animation-name:vt-out-right;z-in
 
 /* The sheet container takes focus for screen readers; it is not a control. */
 .sheet:focus,.sheet:focus-visible{outline:none}
+
+/* The card is a fixed-proportion object: its type stays at card scale under text zoom (its aria-label carries it). */
+.cc .mono-xl{font-size:22px;line-height:28px}
+.cc .mono-m{font-size:15px;line-height:22px}
+.cc .ccbrand b{font-size:15px;line-height:22px}
+.cc .cckind,.cc .ccbrand span{line-height:18px}
+.cc .stamp{font-size:13px;line-height:18px}
+
+/* Tab labels cap at 16 px under large text so five fit side by side; each link's name carries the label. */
+.tb .ti span{font-size:min(var(--tab-fs,0.75rem),16px);line-height:min(1rem,20px)}
+
+/* The week marks are a first-view entrance too; the frames' reduced-motion block missed them. */
+@media (prefers-reduced-motion:reduce){.wk .ok .mkw{animation:none!important}}

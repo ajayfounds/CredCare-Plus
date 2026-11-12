@@ -1,7 +1,8 @@
 import type { CSSProperties } from 'react';
 
 const DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-const ROW = 72;
+// One digit row: the fig-xxl line height (4.5rem), so the roll scales with text size.
+const ROW_REM = 4.5;
 
 /** The score: each digit is a column that rolls to its value (72 px rows, fig-xxl). */
 export function ScoreRoll({ value, className = 'fig-xxl' }: { value: number; className?: string }) {
@@ -10,7 +11,7 @@ export function ScoreRoll({ value, className = 'fig-xxl' }: { value: number; cla
     <>
       <span className={`roll ${className}`} aria-hidden="true">
         {ds.map((d, j) => (
-          <span key={j} className="dc" style={{ '--f': d, '--j': j, transform: `translateY(${-ROW * +d}px)` } as CSSProperties}>
+          <span key={j} className="dc" style={{ '--f': d, '--j': j, transform: `translateY(${-ROW_REM * +d}rem)` } as CSSProperties}>
             {DIGITS.map((x) => <b key={x}>{x}</b>)}
           </span>
         ))}

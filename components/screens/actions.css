@@ -85,7 +85,8 @@
 .s-actions .ze01f12{--i: 2 !important}
 .s-actions .z96ce7e{display: block !important}
 .s-actions .zc7b7d5{display: block !important;color: var(--ok700) !important}
-.s-actions .zac826e{display: block !important;white-space: nowrap !important;overflow: hidden !important;text-overflow: ellipsis !important}
+/* the frame truncated titles to one line; they wrap instead so 200 % text never clips (all fit at 100 %) */
+.s-actions .zac826e{display: block !important}
 .s-actions .z0098fd{color: var(--n900) !important}
 .s-actions .z79ca6f{--sd: 150ms !important}
 .s-actions .z364469{display: flex !important;flex-direction: column !important;align-items: center !important;text-align: center !important;padding:16px 20px 20px !important}
@@ -110,7 +111,7 @@
 .s-actions .z3607c3{display: flex !important;justify-content: space-between !important;align-items: center !important}
 .s-actions .zb04ba8{--pg: var(--n0) !important;margin-top:4px !important}
 .s-actions .zccddf7{margin-top:8px !important;--cb: 1000ms !important}
-.s-actions .z9a45d1{display: block !important;line-height: 26px !important}
+.s-actions .z9a45d1{display: block !important;line-height: 1.625rem !important}
 .s-actions .z7023da{text-align: center !important}
 .s-actions .zad67f1{display: flex !important;flex-direction: column !important}
 .s-actions .z94625f{stroke: var(--n100) !important}

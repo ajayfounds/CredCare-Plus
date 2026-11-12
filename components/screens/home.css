@@ -68,7 +68,8 @@
 .s-home .z4738a1{display: block !important;margin-top:2px !important}
 
 /* Layout carried over from the frame's inline styles. */
-.s-home .home-score{margin-top:var(--sp-3);display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-3)}
+.s-home .home-score{margin-top:var(--sp-3);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--sp-3)}
+.s-home .home-score .roll{flex:none}
 .s-home .home-score-meta{display:flex;flex-direction:column;align-items:flex-end;gap:var(--sp-1);padding-bottom:var(--sp-2)}
 .s-home .home-band-dot{width:8px;height:8px;border-radius:var(--r-full)}
 .s-home .home-bell-dot{position:absolute;top:11px;right:12px;width:8px;height:8px;border-radius:var(--r-full);background:var(--on-ink-1);box-shadow:0 0 0 2px var(--b700)}

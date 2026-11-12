@@ -28,7 +28,6 @@ export function Sheet({ open, label, onClose, children }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   // Sheets are client-only: the reduced-motion entrance can differ from the server render.
   const [mounted, setMounted] = useState(false);
-  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {

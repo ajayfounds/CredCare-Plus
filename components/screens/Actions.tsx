@@ -326,7 +326,7 @@ export function Actions({ sheet: sheet0, view = 'tasks', stage: stage0 }: Props)
               <KV k="EMI" v={inr(sbiLoan.emi)} />
               <KV k="Debits on" v={`${ordinal(sbiDay)} of every month`} />
             </div>
-            <p className="z7023da t-footnote">You'll approve this once in your UPI app</p>
+            <p className="z7023da t-footnote">You&apos;ll approve this once in your UPI app</p>
           </>
         ) : null}
         {sheet === 'upload' ? (
@@ -390,7 +390,7 @@ export function Actions({ sheet: sheet0, view = 'tasks', stage: stage0 }: Props)
             <label className="cb">
               <input type="checkbox" checked={confirm} onChange={() => { setConfirm(!confirm); setNudge(false); }} />
               <span className="box" aria-hidden="true"><CheckIcon className="s-n0" /></span>
-              <span>I didn't apply for this loan. Start a formal review with CIBIL.</span>
+              <span>I didn&apos;t apply for this loan. Start a formal review with CIBIL.</span>
             </label>
             <button className="btn bp" type="button" aria-disabled={!confirm} aria-describedby={nudge ? 'dsp-why' : undefined} onClick={() => { if (!confirm) { setNudge(true); haptic('error'); return; } setStage('submitted'); haptic('stamp'); }}>Submit dispute</button>
             {nudge ? <p id="dsp-why" className="zdaff1b t-footnote" role="status">Tick the box to continue</p> : null}
@@ -417,12 +417,12 @@ export function Actions({ sheet: sheet0, view = 'tasks', stage: stage0 }: Props)
             <HoldButton
               className="z1138ec"
               label={sheet === 'pay' ? `Hold to pay ${PAY}` : 'Hold to set up auto-pay'}
-              ariaLabel={sheet === 'pay' ? `Pay ${PAY}` : 'Set up auto-pay'}
+              describedBy="hold-why"
               initial={holdInitial}
               onComplete={holdDone}
               onTap={() => setDlg(true)}
             />
-            <p className="why" aria-live="polite">Hold for a moment, or tap to confirm</p>
+            <p id="hold-why" className="why">Hold for a moment, or tap to confirm</p>
           </>
         ) : null}
         {showLater ? <button className="btn bg" type="button" onClick={() => snooze(sheet)}>Remind me later</button> : null}
@@ -433,7 +433,6 @@ export function Actions({ sheet: sheet0, view = 'tasks', stage: stage0 }: Props)
 
 function useHoursLeft() {
   const [h, setH] = useState<number | null>(null);
-  // eslint-disable-next-line react-hooks/set-state-in-effect -- device clock is only known on the client
   useEffect(() => setH(hoursLeftToday()), []);
   return h;
 }

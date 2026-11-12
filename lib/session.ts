@@ -23,7 +23,6 @@ export function useEntrance(name: string, tab: number | null, mode: 'session' | 
     }
     const dx = tab == null || from == null || from === tab ? '0' : tab > from ? 'r' : 'l';
     const f = mode === 'always' ? true : first;
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- must land before paint
     if (!f || dx !== '0') setState({ first: f, dx });
   }, [name, tab, mode]);
   return state;

@@ -1,12 +1,17 @@
 {
-  "name": "credcare-app",
+  "name": "credcare",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "audit:design": "node tools/audit-design.mjs",
+    "audit:screens": "node tools/shots.mjs",
+    "audit:zoom": "node tools/zoom.mjs"
   },
   "dependencies": {
     "motion": "^12.43.0",

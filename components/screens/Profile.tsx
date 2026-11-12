@@ -165,7 +165,7 @@ export function Profile() {
                 Log out of CredCare?
               </p>
               <p className="za18ac8 t-subhead c2">
-                Your plan and progress stay saved. You'll need your password to sign back in.
+                Your plan and progress stay saved. You&apos;ll need your password to sign back in.
               </p>
               <Link className="zcdf73f btn" href="/sign-in">
                 Log out
