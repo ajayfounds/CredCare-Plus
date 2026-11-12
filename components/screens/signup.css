@@ -23,7 +23,7 @@
 .s-signup .meter i{display:block;height:4px;border-radius:2px;background:var(--s3);transition:background-color 250ms linear}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-signup .z6d3072{padding:0 !important}
+.s-signup.z6d3072{padding:0 !important}
 .s-signup .z661f89{height: 160px !important;padding-top:60px !important}
 .s-signup .z18fd28{--i: 1 !important;margin-top:2px !important;color: var(--t2) !important}
 .s-signup .z9218c6{--i: 1 !important}

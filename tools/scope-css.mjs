@@ -18,6 +18,9 @@ for (const f of files) {
   frames.push(css.slice(css.lastIndexOf(MARK) + MARK.length));
 }
 
+// The frame's root classes sit on .r itself, so they scope as .s-key.zX rather than as descendants.
+const rootCls = new Set();
+for (const f of files) { const m = fs.readFileSync(f, 'utf8').match(/<main class="([^"]*)"/); if (m) m[1].split(/\s+/).filter((c) => /^z[0-9a-f]{6}$/.test(c)).forEach((c) => rootCls.add(c)); }
 const keyframes = new Set();
 for (const css of frames) postcss.parse(css).walkAtRules('keyframes', (r) => keyframes.add(r.params));
 const renameAnim = (v) => v.replace(/[A-Za-z][\w-]*/g, (w) => (keyframes.has(w) ? `${w}--${key}` : w));
@@ -26,6 +29,8 @@ const scopeSel = (sel) => sel.split(',').map((s) => {
   s = s.trim();
   if (/^\.r(?![\w-])/.test(s)) return s.replace(/^\.r(?![\w-])/, '.r' + scope);
   if (/^(html|body|:root)\b/.test(s)) return s;
+  const m = s.match(/^\.(z[0-9a-f]{6})(?![\w-])/);
+  if (m && rootCls.has(m[1])) return scope + s;
   return `${scope} ${s}`;
 }).join(',');
 

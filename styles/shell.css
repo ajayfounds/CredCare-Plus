@@ -10,6 +10,8 @@ body{margin:0;background:var(--n50);font-family:var(--ff);color:var(--t1);-webki
 
 /* The frames were a fixed canvas; in the app the root grows with its content. */
 .r{min-height:100%}
+/* clip, not hidden: hidden makes .r a scroll container and breaks sticky headers */
+.phone .r{overflow:clip}
 
 /* Overlays dock to the phone, not to the scrolling page. */
 .phone .tb,.phone .r .toast,.phone .r .scrim,.phone .r .sheet,.phone .r .dlg,.phone .r .dlgs,.phone .r .dock{position:fixed}

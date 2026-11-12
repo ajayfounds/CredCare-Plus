@@ -5,7 +5,7 @@
 .s-analysis .notch{animation:drop var(--d-base) var(--spring) 900ms both}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-analysis .z39bb65{padding:56px 20px 40px !important}
+.s-analysis.z39bb65{padding:56px 20px 40px !important}
 .s-analysis .zb0043e{margin-top:16px !important}
 .s-analysis .zd43169{margin-top:8px !important}
 .s-analysis .z022793{margin-top:20px !important;padding:20px !important}
@@ -23,5 +23,17 @@
 .s-analysis .z3b9cf7{position: absolute !important;left: 30% !important;top: -4px !important;width: 2px !important;height: 16px !important;background: var(--n900) !important;border-radius: 1px !important}
 .s-analysis .z0098fd{color: var(--n900) !important}
 .s-analysis .z062d4a{margin-top:24px !important}
-.s-analysis .z517d4f{padding:56px 20px 40px !important}
+.s-analysis.z517d4f{padding:56px 20px 40px !important}
 .s-analysis .z7023da{text-align: center !important}
+
+/* Layout carried over from the frame's inline styles. */
+.s-analysis .an-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;position:sticky;top:0;z-index:4;margin:0 calc(-1 * var(--sp-5));padding:0 var(--sp-5);background:var(--bg)}
+.s-analysis .an-mini{opacity:0;transition:opacity var(--d-fast) linear}
+.s-analysis .an-head.on .an-mini{opacity:1}
+.s-analysis .an-row{display:flex;justify-content:space-between;align-items:baseline}
+.s-analysis .an-fig{margin-top:var(--sp-1);display:flex;align-items:baseline;gap:var(--sp-2)}
+.s-analysis .an-mt12{margin-top:var(--sp-3)}
+.s-analysis .an-mt8{margin-top:var(--sp-2)}
+.s-analysis .chart{width:310px;max-width:100%;height:auto}
+.s-analysis .chart .sl{width:100%;height:auto}
+.s-analysis .an-notch{position:absolute;top:-4px;width:2px;height:16px;background:var(--n900);border-radius:1px}

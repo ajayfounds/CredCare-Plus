@@ -18,7 +18,7 @@
 @keyframes shin--profile{from{transform:translateY(100%)}to{transform:none}}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-profile .zfbe1dc{padding:60px 20px 128px !important}
+.s-profile.zfbe1dc{padding:60px 20px 128px !important}
 .s-profile .zf423a6{--i: 1 !important;margin-top:24px !important;border-radius: var(--r-lg) !important;background: var(--b50) !important;overflow: hidden !important}
 .s-profile .z0bb82a{padding:16px 20px !important;display: flex !important;align-items: center !important;gap:12px !important}
 .s-profile .z587503{width: 52px !important;height: 52px !important;flex: none !important;border-radius: 999px !important;display: grid !important;place-items: center !important;background: var(--b700) !important;color: var(--on-ink-1) !important}

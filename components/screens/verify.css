@@ -39,7 +39,7 @@
 .s-verify .steps li.ok .dot{background:var(--ok600);box-shadow:none}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-verify .z0fbfaa{padding:56px 20px 32px !important}
+.s-verify.z0fbfaa{padding:56px 20px 32px !important}
 .s-verify .z062d4a{margin-top:24px !important}
 .s-verify .za56e29{--i: 1 !important;margin-top:8px !important}
 .s-verify .z3621a4{--i: 2 !important;margin-top:32px !important;display: flex !important;justify-content: space-between !important;align-items: center !important;padding-bottom:16px !important;box-shadow: inset 0 -1px 0 var(--line) !important}

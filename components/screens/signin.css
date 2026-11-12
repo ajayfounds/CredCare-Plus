@@ -23,7 +23,7 @@
 .s-signin .meter i{display:block;height:4px;border-radius:2px;background:var(--s3);transition:background-color 250ms linear}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-signin .z6d3072{padding:0 !important}
+.s-signin.z6d3072{padding:0 !important}
 .s-signin .z6e6a93{margin-top:2px !important;color: var(--t2) !important}
 .s-signin .z134702{display: flex !important;gap:12px !important;align-items: flex-start !important;margin-bottom:16px !important;padding:12px 12px !important;border-radius: var(--r-md) !important;background: var(--er50) !important;color: var(--er700) !important;font: var(--f-subhead-m) !important}
 .s-signin .z680829{flex: none !important;margin-top:1px !important}

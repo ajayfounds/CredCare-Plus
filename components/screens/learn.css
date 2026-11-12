@@ -25,7 +25,7 @@
 .s-learn .fleg button i{width:10px;height:10px;border-radius:3px;flex:none}.s-learn .fleg button[aria-pressed=true]{color:var(--b700);background:var(--b50)}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-learn .z4bb9c3{padding:60px 20px 120px !important}
+.s-learn.z4bb9c3{padding:60px 20px 120px !important}
 .s-learn .z5001c5{display: flex !important;flex-direction: column !important;gap:16px !important}
 .s-learn .z2f0b1c{margin-top:32px !important;display: flex !important;flex-direction: column !important;gap:24px !important}
 .s-learn .z162c0b{padding:20px !important;height: 196px !important}

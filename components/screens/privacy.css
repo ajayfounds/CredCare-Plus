@@ -14,7 +14,7 @@
 @media (prefers-reduced-motion:reduce){.s-privacy .sw,.s-privacy .sw::after{transition:none}}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-privacy .zccfae7{padding:56px 20px 40px !important}
+.s-privacy.zccfae7{padding:56px 20px 40px !important}
 .s-privacy .z7023da{text-align: center !important}
 .s-privacy .zf69a28{margin-top:24px !important;overflow: hidden !important}
 .s-privacy .zd2dc0a{flex: 1 !important}

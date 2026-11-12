@@ -1,6 +1,6 @@
 /* splash: frame-local CSS ported from V9Splash.dc.html */
 /* static layout moved out of markup (v9 system pass) */
-.s-splash .z6d3072{padding:0 !important}
+.s-splash.z6d3072{padding:0 !important}
 .s-splash .z599721{position: absolute !important;inset: 0 !important;background-color: var(--n25) !important;display: flex !important;flex-direction: column !important;padding:64px 20px 32px !important;color: var(--n900) !important}
 .s-splash .z8e12e4{display: flex !important;align-items: center !important;gap:8px !important}
 .s-splash .z5414ac{color: var(--b700) !important}

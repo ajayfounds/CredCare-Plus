@@ -14,7 +14,7 @@
 @media (prefers-reduced-motion:reduce){.s-notifications .sw,.s-notifications .sw::after{transition:none}}
 
 /* static layout moved out of markup (v9 system pass) */
-.s-notifications .zccfae7{padding:56px 20px 40px !important}
+.s-notifications.zccfae7{padding:56px 20px 40px !important}
 .s-notifications .z7023da{text-align: center !important}
 .s-notifications .z75ee02{margin:24px 0 12px !important}
 .s-notifications .z2959c3{overflow: hidden !important}
