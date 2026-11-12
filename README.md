@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CredCare
 
-## Getting Started
+A credit-score recovery app for people in India with a falling CIBIL score and debt stress. It shows what pulled the score down, then works through a 180-day plan, one payment at a time.
 
-First, run the development server:
+The design language is "the passbook": ruled entries, stamps, receipts and a printer loader, in one ink-blue hue. Words are set in Manrope and figures in IBM Plex Mono.
+
+This repo is the production build of the **CredCare v9** design handoff. It ports all 58 product frames faithfully: same layout, same CSS, same interactions.
+
+## Stack
+
+- Next.js 15 (App Router), React 19, TypeScript
+- No CSS framework. Global `styles/tokens.css` and `styles/app.css` (the frames' component CSS, copied in), plus one scoped stylesheet per screen and CSS Modules for new components.
+- [`motion`](https://motion.dev) for springs, drag and layout animation; the frames' CSS keyframes for entrances
+- One `AppProvider` (context + `useReducer`) for session state: pay, completeTask, undo, submitDispute, startUpload, setAutopay
+- No backend: `lib/data.ts` is the API boundary. Swap it for a fetch layer that returns the same shapes and no component needs to change.
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Script | What it does |
+|---|---|
+| `npm run build` / `npm start` | Production build and server |
+| `npm run lint`, `npm run typecheck` | ESLint, TypeScript |
+| `npm run test:e2e` | Playwright: interactions, axe, reduced motion and transparency |
+| `npm run audit:design` | Raw colours, spacing scale, type sizes, contrast, tap targets, overflow (needs the app on :3010) |
+| `npm run audit:screens` | Renders every frame's route at 390 px into `audit/screens` and side-by-side comparisons |
+| `npm run audit:zoom` | 200 % text check on Home, Pay and Actions |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To see a state frame, add `?state=` to its route, for example `/home?state=offline`, `/actions?sheet=pay&stage=success` or `/verify?state=otp`. The full map is in `tools/routes.mjs`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where things are
 
-## Learn More
+```
+app/                 routes; (tabs) holds Home, Recovery, Actions, Learn, Profile and the tab bar
+components/screens/  one component + scoped stylesheet per screen, ported from the frames
+components/{card,chart,plan,home,list,ui}/   PaymentCard, ScoreSlider, PhaseStack, WeekStrip, SwipeRow, HoldButton, Sheet…
+lib/                 data.ts (mock), model.ts, plan.ts, store.tsx, motion.ts, session.ts, format.ts
+styles/              tokens.css, app.css (from the frames), shell.css (phone frame, overlays, transitions)
+design/              tokens.json and components.json from the handoff
+tools/               porting aids, the screenshot diff and the audits
+tests/               Playwright specs
+```
 
-To learn more about Next.js, take a look at the following resources:
+The design handoff (reference frames, PNGs and specs) lives outside this repo, in `credcare-v9-handoff/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acceptance
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All checks pass. Details and every intentional difference from the frames are in [ACCEPTANCE.md](ACCEPTANCE.md).
 
-## Deploy on Vercel
+- Build, lint and TypeScript: clean
+- Visual diff across all 58 frames: worst 1.81 % of pixels differ, median 0.82 %
+- 14 interaction tests, axe on 5 pages, reduced motion, reduced transparency: all pass
+- Design audit: zero failures
+- Lighthouse on `/home`: performance 97, accessibility 100, best practices 100
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Live URL
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Not deployed yet.
